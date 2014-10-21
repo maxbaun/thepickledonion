@@ -489,6 +489,7 @@ a:focus {
 	background-position: 100% 0;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	background-size:cover;
 	width: 100%;
 	padding: 6% 0;
 	color: #fff;
@@ -1048,22 +1049,6 @@ html.ie8 #gallery figure:hover figcaption {
 			font-size: 16px;
 			line-height: 22px;
 		}
-		#top {
-			height: 72px;
-		}
-		
-		#front {
-			padding-top: 76px;
-		}
-		
-/* 
-		#logo {
-			margin-left: 2.5%;
-		}
- */
-		
-
-		
 
 		#top ul.span8.right > li > a {
 			float: right;

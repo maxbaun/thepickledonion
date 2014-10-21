@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('America/Los_Angeles');  
+date_default_timezone_set('America/New_York');  
 require_once("facebook.php");
 
 $config = array();
@@ -16,7 +16,14 @@ foreach($ret['data'] as $event)
 {
 	
 	$name = $event['name'];
-	$cover = $event['cover']['source'];
+	// debugging
+	// var_dump($event);
+	// echo '<br/><br/>';
+	$cover = '';
+	if(!isset($event['cover']))
+		$cover = '/img/logo-small.png';
+	else
+		$cover = $event['cover']['source'];
 	$id = $event['id'];
 	$url = "https://facebook.com/events/" . $event['id'];
 	$start_date = strtotime($event['start_time']);

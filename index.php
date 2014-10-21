@@ -1,19 +1,19 @@
-<?php
-$title = "Beverly Night Life, Sports Bar, and Restaurant | The Pickled Onion";
-$keywords = "beverly, trivia, sports, nightlife, karaoke, restaurant, bar, irish pub, sports bar, djs, music";
-$metadescription = "Beverly, MA nightlife, pub, sports bar, and restaurant. The Pickled Onion features the best in live music and DJs on the North Shore.";
-$version = 1.01;
-$dev = true;
-?>
-
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en"> 
+<!--<![endif]-->
 <head>
-	
+	<?php
+		$title = "Beverly Night Life, Sports Bar, and Restaurant | The Pickled Onion";
+		$keywords = "beverly, trivia, sports, nightlife, karaoke, restaurant, bar, irish pub, sports bar, djs, music";
+		$metadescription = "Beverly, MA nightlife, pub, sports bar, and restaurant. The Pickled Onion features the best in live music and DJs on the North Shore.";
+		$version = 1.1;
+		$dev = false;
+	?>	
 	<!-- Basic Page Needs
   ================================================== -->
 
@@ -191,7 +191,7 @@ $dev = true;
 	</div>
 	
 	<!-- Directions -->
-	<div id="events" class="panel dark-leather section-type light" data-slide="3" data-stellar-background-ratio="0" >
+	<div id="events" class="panel dark-leather section-type light" data-slide="3">
 		<h2 class="page-title">Events</h2>
 		
 		<div class="container">
@@ -516,7 +516,7 @@ $dev = true;
 	-->
 
 	<!-- jQuery -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 	<!-- Google Maps API -->
 	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>

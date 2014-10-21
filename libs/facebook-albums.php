@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('America/Los_Angeles');  
+date_default_timezone_set('America/New_York');  
 require_once("facebook.php");
 
 $config = array();
@@ -18,7 +18,7 @@ foreach($data as $album)
 {
 	$id = $album['id'];
 	$name = $album['name'];
-	if(!$album['cover_photo'])
+	if(!isset($album['cover_photo']))
 	{
 		$cover = "";
 		continue;
@@ -26,7 +26,14 @@ foreach($data as $album)
 	else
 	{
 		$coverdata = $facebook->api($album['cover_photo']);
-		$cover = $coverdata['images'][3]['source'];
+		// debugging
+		// var_dump($coverdata['images']);
+		// echo '<br/><br/>';
+		if(!isset($coverdata['images'][3])){
+			$cover = $coverdata['images'][1]['source'];	// if the regular image is not avail, use the first one			
+		}
+		else
+			$cover = $coverdata['images'][3]['source'];
 	}
 	$link = $album['link'];
 	
