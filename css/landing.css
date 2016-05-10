@@ -13,6 +13,11 @@
   margin-bottom:30px;
 }
 
+.hero h3 a{
+  text-decoration: none;
+  color: white;
+}
+
 .hero #logo h3{
   font-size: 60px;
   line-height: 60px;
@@ -23,6 +28,7 @@
 .hero .social{
   text-align:center;
   width:100%;
+  margin-bottom: 30px;
 }
 
 .hero .social li{
@@ -33,7 +39,7 @@
 .hero .content{
   margin-left:auto;
   margin-right: auto;
-  max-width:320px;
+  max-width:600px;
 }
 
 .vertical-center-wrapper{
