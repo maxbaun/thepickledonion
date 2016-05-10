@@ -1,5 +1,6 @@
 <?php
-date_default_timezone_set('America/New_York');  
+header('Access-Control-Allow-Origin: *');
+date_default_timezone_set('America/New_York');
 require_once("facebook.php");
 
 $config = array();
@@ -14,7 +15,7 @@ $events = Array();
 
 foreach($ret['data'] as $event)
 {
-	
+
 	$name = $event['name'];
 	// debugging
 	// var_dump($event);
@@ -36,22 +37,22 @@ foreach($ret['data'] as $event)
 	$end_date = strtotime($event['start_time']);
 //	$end = date("F j, Y, g:i a", $end);
 
-	
+
 	// with image
 	$html = '<div class="event-info" id="'.$id.'"><ul class="what-when"><li><strong>'. $name .'</strong></li><li><p>'.$start_month.'/'.$start_day.'/'.$start_year.'</p></li><li><a href="'.$url.'"><img alt="" src="'.$cover.'"></a></li></ul><a href="'.$url.'" class="btn btn-primary" target="_blank">View Event</a></div>';
-	
-	// no image	
+
+	// no image
 	//$html = '<div class="event-info"><ul class="what-when"><li><strong>'. $name .'</strong></li><li><p>'.$start_month.'/'.$start_day.'/'.$start_year.'</p></li><li><a href="'.$url.'"></ul><a href="'.$url.'" class="btn btn-primary" target="_blank">View Event</a></div>';
 
 	// no image	& date
 	//$html = '<div class="event-info" id="'.$id.'"><ul class="what-when"><li><strong>'. $name .'</strong></li><li><a href="'.$url.'"></ul><a href="'.$url.'" class="btn btn-primary" target="_blank">View Event</a></div>';
 
 
-// 	if($start_year == $_GET['year'] && $start_month == $_GET['month']) 
+// 	if($start_year == $_GET['year'] && $start_month == $_GET['month'])
 // 	{
 		$events[] = Array("date"=>$start, "title"=> $name, "url"=>$url);
 //	}
-	
+
 
 }
 

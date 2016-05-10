@@ -1,5 +1,6 @@
 <?php
-date_default_timezone_set('America/New_York');  
+header('Access-Control-Allow-Origin: *');
+date_default_timezone_set('America/New_York');
 require_once("facebook.php");
 
 $config = array();
@@ -30,13 +31,13 @@ foreach($data as $album)
 		// var_dump($coverdata['images']);
 		// echo '<br/><br/>';
 		if(!isset($coverdata['images'][3])){
-			$cover = $coverdata['images'][1]['source'];	// if the regular image is not avail, use the first one			
+			$cover = $coverdata['images'][1]['source'];	// if the regular image is not avail, use the first one
 		}
 		else
 			$cover = $coverdata['images'][3]['source'];
 	}
 	$link = $album['link'];
-	
+
 	$albums[] = Array("id"=>$id,"name"=>$name,"cover"=>$cover,"link"=>$link);
 }
 

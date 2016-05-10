@@ -1,5 +1,6 @@
 <?php
-date_default_timezone_set('America/Los_Angeles');  
+header('Access-Control-Allow-Origin: *');
+date_default_timezone_set('America/New_York');
 require_once("facebook.php");
 
 // Create our Application instance (replace this with your appId and secret).
@@ -19,7 +20,7 @@ foreach($data as $photo)
 	$name = $photo['album']['name'];
 	$source = $photo['images'][3]['source'];
 	$link = $photo['link'];
-	
+
 	$photos[] = Array("id"=>$id,"name"=>$name,"source"=>$source,"link"=>$link);
 }
 
